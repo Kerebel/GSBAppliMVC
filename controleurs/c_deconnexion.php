@@ -24,7 +24,7 @@ case 'demandeDeconnexion':
     include 'vues/v_deconnexion.php';
     break;
 case 'valideDeconnexion':
-    if (estConnecte()) {
+    if (estConnecte() || estConnecteComptable() ) {
         include 'vues/v_deconnexion.php';
     } else {
         ajouterErreur("Vous n'êtes pas connecté");
